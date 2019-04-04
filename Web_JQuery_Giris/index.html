@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #Liste {
+            height: 200px;
+            width: 200px;
+            background-color: lightgray;
+        }
+
+        .genel {
+            width: 200px;
+            height: 150px;
+            background-color: aquamarine;
+        }
+    </style>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        //$(document).ready(function () {
+        //    $("#btnEkle").click(
+        //        function Ekle() {
+        //            alert("fonksiyona girdi ");
+        //            var metin = $("#txtAd").val();
+        //            //bu metot #liste id sine sahip elemanın tüm değerlerini değiştir
+        //            //$("#Liste").html(metin);
+        //            //hepsini değiştirmez var olanın üstüne yazar
+        //            $("#Liste").append(metin);
+        //            $("txtAd").val("");
+        //            $("txtAd").focus();
+
+
+        //        })
+        //});
+
+        $(document).ready(function () {
+
+
+            $("#btnAcKapa").click(function () {
+                $(".genel").toggle();
+                $(".genel").fadeToggle("slow");
+                $(".genel").slideToggle("slow");
+                //class'ı genel olan divi açık ise animasyonlu şekilde kapatmak,kapalı ise animasyonlu şekilde açmak için yukarıdaki kodlar yazılmıştır.
+            })
+
+            //var clicked = true;
+            $("#btnRenkDegistir").click(function () {
+                var anlikRenk = $("#btnRenkDegistir").css("background-color");
+                //alert("if else öncesi");
+                alert(anlikRenk)
+                if (anlikRenk != "rgb(255, 0, 0)") {
+                    //alert("if bloğu")
+                    $("#btnRenkDegistir").css("background-color", "red")
+                }
+                else {
+                    //alert("else bloğu")
+                    $("#btnRenkDegistir").css("background-color", "black")
+                }
+
+                //if (clicked) {
+                //    $("#btnRenkDegistir").css("background-color", "red");
+                //    clicked = false;
+                //}
+                //else {
+                //    $("#btnRenkDegistir").css("background-color", "black");
+                //    clicked = true;
+                //}
+            })
+
+            $("#btnRandomRenk").click(function () {
+                var anlikRenk = $("#btnRandomRenk").css("background-color");
+                var s1 = Math.floor(Math.random() * 255);
+                var s2 = Math.floor(Math.random() * 255);
+                var s3 = Math.floor(Math.random() * 255);
+                var rgbString = "rgb(" + s1 + ", " + s2 + ", " + s3 + ")";
+                $("#btnRandomRenk").css("background-color", rgbString);
+            })
+        });
+    </script>
+
+</head>
+<body>
+    Adı:<input type="text" id="txtAd" />
+    <input type="button" name="btnEkle" value="Ekle" id="btnEkle" onclick="Ekle()" />
+    <br />
+    <div id="Liste"></div>
+    <div class="genel"></div>
+    <input type="button" value="DIV Aç/Kapa" id="btnAcKapa" />
+    <input type="button" value="Renk Değiştir" id="btnRenkDegistir" />
+    <br />
+    <input type="button" value="Rastgele Renk Değiştir" id="btnRandomRenk" />
+
+</body>
+</html>

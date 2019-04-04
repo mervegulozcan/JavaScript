@@ -1,0 +1,17 @@
+﻿div {
+    width: 250px;
+    height: 250px;
+    background-color: deepskyblue;
+}
+
+#ozelDiv {
+    border: 5px solid black;
+    outline-style: dotted;
+    outline-color: gray;
+}
+
+.ortakDiv {
+    border: 5px solid red;
+    outline-style: groove;
+    outline-color: moccasin;
+}

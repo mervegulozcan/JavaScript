@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!--body içerisindeki bir elemanı seçmek istersek,javascript'de body içerisindeki elemanların döküman nesnesi içerisinde olduğu bilgisinin kullanırız ve döküman içerisindeki elemanları id,class vb göre seçeriz -->
+    <script>
+        function UyariVer() {
+            alert("Uyarı!");
+        }
+        function Ekle() {
+            //alert("Fonksiyona girdi");
+            var txtIsimRef = document.getElementById("txtEkle");
+            var metin = document.getElementById("txtEkle").value;
+            /*javascripte veri tip kavramı yok.javascriptin type güvenliği yok*/
+            metin = metin + "<br/>";
+            document.getElementById("liste").innerHTML += metin;
+            txtIsimRef.value = "";
+            txtIsimRef.focus();
+            
+        }
+    </script>
+    <style>
+        #liste {
+            width: 250px;
+            height: 400px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    Adi: <input type="text" id="txtEkle" />
+    <input type="button" value="Ekle" name="btnEkle" id="btnEkle" onclick="Ekle()" />
+    <!-- <input type="button" name="name" value="Uyarı Ver" onclick="UyariVer()" /> -->
+    <!--bir inputa ulaşmak istediğinde ya tag ismi ya da id veya class ismine göre ulaşabilirsiniz.-->
+    <br />
+    <div id="liste"></div>
+    <!--Script kodları body elemanları yüklendikten sonra yüklensin demek için iki yol mevcuttur
+            1.yol:burada olduğu gibi script kodlarının body düğümü içinde en alta yazılması.
+            2.yol:script kodlarının script düğümünün içinde head düğümünde yazılmasıdır bunun için window.onload fonksiyonu kullanılır -->
+</body>
+</html>

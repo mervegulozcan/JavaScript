@@ -1,0 +1,74 @@
+﻿div {
+    width: 200px;
+    height: 150px;
+    background-color: steelblue;
+    border: 4px solid black;
+    border-radius: 15px;
+    float: left;
+}
+
+    div:hover {
+        cursor: pointer;
+        background-color: red;
+        transition: 1s;
+        transform: rotateX(180deg) 
+        /*transform: rotate(360deg)*/
+    }
+
+    .hareket:hover{
+        animation:transform-me 5s;
+    }
+
+@keyframes transform-me {
+    0% {
+        transform: translate(0px,0px)
+    }
+
+    25% {
+        transform: translate(208px)
+    }
+
+    50% {
+        transform: translate(208px,500px)
+    }
+
+    75% {
+        transform: translate(0px,500px)
+    }
+}
+
+
+
+#animasyon:hover {
+    /*animation diye bir özellik vardır ama öncelikle dışarıda bu animation'ı tanımlamamız gerekir */
+    animation: AnimasyonYap 10s;
+    position:absolute;
+}
+
+#sabit{
+    position:fixed;
+    margin-top:300px;
+}
+@keyframes AnimasyonYap {
+    0% {
+        margin-top:0px;
+        margin-left:400px;
+    }
+
+    25% {
+        margin-top: 500px;
+        margin-left: 200px;
+    }
+
+    50% {
+        margin-top: 500px;
+        margin-left: 0px;
+    }
+
+    75% {
+        margin-top: 0px;
+        margin-left:0px;
+    }
+}
+
+

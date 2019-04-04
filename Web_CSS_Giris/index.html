@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ilk CSS Sayfamız</title>
+    <style>
+        /*tagi p olanlara button özelliği ver*/
+        p {
+            font-size: 20px;
+            font-family: 'ar';
+            color: blue;
+            background-color: wheat;
+            text-align: center
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            border: 5px solid red;
+            outline-style: dotted;
+            outline-color: #ffd800;
+        }
+
+        #ozelDiv{
+            background-color:aqua;
+
+        }
+        .ortakDiv{
+            background-color:green;
+            border:10px solid black;
+            /*border-radius:15px;*/
+            border-bottom-left-radius:15px;
+            box-shadow:gray 10px 10px 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <!--
+        CSS(Cascading Style Sheet):HTML elemanlarına (taglerine) stil vermek için kullanılan yapılardır.
+        CSS,CSS kodlarının yazıldığı yere göre üçe ayrılır:
+        1-Inline CSS : CSS kodlarının HTML elemanlarının style attribute'unda yazıldığı css tipidir.
+        2-Internal CSS : CSS kodlarının HTML sayfasındaki head düğümü arasına,style düğümü açılarak,
+                        style düğümü arasına yazılan CSS tipidir.
+        3-External CSS : CSS kodlarının projede ayrı bir CSS dosyasında yazıldığı CSS tipidir.
+                        Bu dosyada sadece CSS kodları yazılır
+        -->
+
+    <p style="font-size:30px; font-family:'Comic Sans MS';color:red;background-color:darkgray;text-align:center">ilk css verdiğimiz p elemanı</p>
+    <br />
+    <p style="color:black">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget molestie dui, vitae consectetur nisi. Aliquam convallis quam nisl, in tempor arcu dapibus sed. Integer eget justo justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus id sem nec dignissim. Vestibulum sodales, dolor et molestie luctus, nulla magna rutrum ante, sit amet mollis urna orci at eros. Sed sit amet felis iaculis est vulputate efficitur eu nec mi. Phasellus consectetur rhoncus accumsan. Suspendisse molestie, urna id accumsan rutrum, nibh lacus gravida leo, vel ultrices felis nunc at eros. Sed ligula dui, dapibus eu orci eu, rhoncus pretium nibh. Integer porta scelerisque libero, vel consectetur erat finibus eget.
+    </p>
+    <br />
+    <p>
+        Praesent ac leo a eros hendrerit pulvinar a ut sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum elementum arcu porta, cursus metus nec, tincidunt sapien. Etiam nec tellus vestibulum, tincidunt ligula non, convallis mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc mollis non sapien nec mollis.
+    </p>
+    <br />
+    <p>
+        Donec ac lectus imperdiet, convallis tortor vel, consequat arcu. Aenean eu tellus vel massa rutrum molestie. Ut blandit mauris quis hendrerit vestibulum. Aenean dapibus mattis ex laoreet gravida. Aliquam erat volutpat. Maecenas fermentum tempor lectus, ac volutpat ex efficitur non. Curabitur imperdiet nunc tellus, sed finibus massa tincidunt vel. Sed non sodales diam. Donec auctor lobortis quam quis hendrerit.
+    </p>
+    <br />
+    <p>
+        Nullam consequat erat a ultrices posuere. Aliquam eu purus sed diam auctor placerat et ut nulla. Aenean eu porttitor dolor, et volutpat lacus. Etiam eget elit eget tellus porta feugiat. Aenean venenatis diam arcu, quis suscipit dolor tempor non. Nulla malesuada diam iaculis tristique feugiat. Nam tincidunt volutpat feugiat. Praesent eget dolor sit amet justo posuere dignissim. Vivamus egestas fermentum elementum. Integer ultrices odio quis ante iaculis porttitor. Aliquam non lacinia turpis. Cras sed iaculis nulla, et tempus sapien. Vivamus vel lacus nibh. Nam condimentum magna tellus, in eleifend sapien semper id. Fusce suscipit vulputate scelerisque. Proin suscipit tempor libero non venenatis.
+    </p>
+    <br />
+    <p>
+        Nunc ultricies accumsan aliquam. Nulla eget rhoncus nunc, ac varius lectus. Sed sit amet venenatis velit, et luctus metus. Cras purus orci, dictum sed nibh eu, ullamcorper vehicula dui. Etiam vestibulum erat in elit placerat vestibulum. Quisque iaculis leo augue, nec consequat massa posuere eu. Cras porttitor lectus sed odio dapibus, sed sagittis quam ullamcorper. Morbi faucibus nibh lectus. Aenean vitae condimentum leo.
+    </p>
+    <br />
+    <div></div>
+    <br />
+    <div id="ozelDiv"></div>
+    <br />
+    <div class="ortakDiv"></div>
+    <br />
+    <div class="ortakDiv"></div>
+    <br />
+    <div class="ortakDiv"></div>
+    <br />
+    <div class="ortakDiv"></div>
+</body>
+</html>
